@@ -19,8 +19,8 @@
  * THE SOFTWARE.
  */
 
-#ifndef _BC1_H_
-#define _BC1_H_ 1
+#ifndef _BC1_H
+#define _BC1_H 1
 
 #include <stdlib.h>
 #include <stdint.h>
