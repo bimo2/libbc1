@@ -1,0 +1,25 @@
+---
+_dna: 0
+project: bimo2/libbc1
+
+dependencies:
+  Automake:
+    - automake
+    - autoreconf
+    - m4
+    - libtool
+
+scripts:
+  build:
+    info: Configure build files
+    run:
+      - "autoreconf --force --install ."
+      - "./configure"
+
+  install:
+    info: Install headers and lib files
+    run: "sudo make install"
+
+  clean:
+    info: Delete cache and build files
+    run: "git clean -Xfd"

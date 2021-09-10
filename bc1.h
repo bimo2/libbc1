@@ -1,4 +1,4 @@
-/* Copyright (c) 2017, 2021 Pieter Wuille
+/* Copyright (c) 2017, 2021 Pieter Wuille, Bimal Bhagrath
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,8 +22,8 @@
 #ifndef _BC1_H
 #define _BC1_H 1
 
-#include <stdlib.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 /** Supported encodings. */
 typedef enum {
@@ -43,12 +43,7 @@ typedef enum {
  *  Returns 1 if successful.
  */
 int bech32_encode(
-  char *output,
-  const char *hrp,
-  const uint8_t *data,
-  size_t data_len,
-  bech32_encoding enc
-);
+    char *output, const char *hrp, const uint8_t *data, size_t data_len, bech32_encoding enc);
 
 /** Decode a Bech32 or Bech32m string
  *
@@ -63,12 +58,7 @@ int bech32_encode(
  *  with the specified encoding standard. BECH32_ENCODING_NONE is returned if
  *  decoding failed.
  */
-bech32_encoding bech32_decode(
-  char *hrp,
-  uint8_t *data,
-  size_t *data_len,
-  const char *input
-);
+bech32_encoding bech32_decode(char *hrp, uint8_t *data, size_t *data_len, const char *input);
 
 /** Encode a SegWit address
  *
@@ -82,12 +72,7 @@ bech32_encoding bech32_decode(
  *  Returns 1 if successful.
  */
 int segwit_addr_encode(
-  char *output,
-  const char *hrp,
-  int ver,
-  const uint8_t *prog,
-  size_t prog_len
-);
+    char *output, const char *hrp, int ver, const uint8_t *prog, size_t prog_len);
 
 /** Decode a SegWit address
  *
@@ -103,11 +88,6 @@ int segwit_addr_encode(
  *  Returns 1 if successful.
  */
 int segwit_addr_decode(
-  int* ver,
-  uint8_t* prog,
-  size_t* prog_len,
-  const char* hrp,
-  const char* addr
-);
+    int *ver, uint8_t *prog, size_t *prog_len, const char *hrp, const char *addr);
 
 #endif

@@ -1,0 +1,9 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+AlignAfterOpenBracket: AlwaysBreak
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+ColumnLimit: 100
+PointerAlignment: Right
+---
